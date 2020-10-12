@@ -12,7 +12,8 @@ use App\User;
 class AuthController extends Controller
 {
     public function login(LoginRequest $request){
-        if(Auth::attempt(['email' => request('email'), 'password' => request('password'), 'active' => true])){
+        //dd(Auth::attempt(['email' => request('email'), 'password' => request('password')]));
+        if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
             $user = Auth::user();
             return response()->json([
                 'access_token' => $user->accessToken(),
