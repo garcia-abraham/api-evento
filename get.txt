@@ -1,0 +1,13 @@
+user: {
+                first_name: "",
+                last_name: "",
+                city: "",
+                phone: "",
+                industry: "",
+                organization: "",
+                position: "",
+                email: "",
+                is_partner: false,
+                event_info: "",
+                password: ''
+            }
