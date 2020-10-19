@@ -19,3 +19,13 @@ Route::group(['middleware' => 'cors'], function() {
     Route::post('login', 'AuthController@login');
 
 });
+
+Route::group(['middleware' => ['auth:api', 'cors']], function() {
+
+    /* Auth Routes */
+    Route::post('logout', 'AuthController@logout');
+
+    /* User Routes */
+    Route::get('check-user', 'UserController@checkUser');
+ 
+});

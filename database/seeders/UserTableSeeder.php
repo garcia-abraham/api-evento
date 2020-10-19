@@ -35,5 +35,19 @@ class UserTableSeeder extends Seeder
             'is_partner' => false,
             'event_info' => 'lo que sea'
         ]);
+
+        User::create([
+            'first_name' => 'raxar',
+            'phone' => '123456',
+            'last_name' => 'raxar',
+            'email' => 'roomin@raxar.com.ar',
+            'password' => Hash::make('raxar'),
+            'industry'=> 'computerDeluxe',
+            'city' => 'La ramada',
+            'organization' => 'que',
+            'position' => 'vaya uno',
+            'is_partner' => false,
+            'event_info' => 'lo que sea'
+        ]);
     }
 }
